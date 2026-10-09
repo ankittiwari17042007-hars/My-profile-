@@ -1,13 +1,22 @@
+/* =========================
+   1. Global Settings
+========================= */
+
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    padding: 30px 15px;
-    font-family: Arial, sans-serif;
+    padding: 30px 16px;
 
-    /* Background */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+
     background: linear-gradient(
         135deg,
         #dbeafe,
@@ -18,158 +27,400 @@ body {
     color: #1e293b;
 }
 
-/* Main Profile Card */
+
+/* =========================
+   2. Main Profile Card
+========================= */
+
 .profile-card {
+    width: 100%;
     max-width: 850px;
-    margin: auto;
+
+    margin: 0 auto;
     padding: 35px 25px;
 
-    background: white;
+    background: #ffffff;
 
+    border: 1px solid #dbeafe;
     border-radius: 25px;
 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 
     text-align: center;
 }
 
-/* Main Heading */
-h1 {
-    font-size: 48px;
+
+/* =========================
+   3. Main Heading
+========================= */
+
+.profile-card > h1 {
+    margin: 0 0 20px;
+
+    font-size: 42px;
+    line-height: 1.2;
+
     color: #1d4ed8;
-    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-/* Profile Name */
+
+/* =========================
+   4. Profile Photo
+========================= */
+
+.profile-photo {
+    display: block;
+
+    width: 140px;
+    height: 140px;
+
+    margin: 0 auto 18px;
+
+    /*
+       Keep the photo inside a circle.
+       Adjust vertical position if needed.
+    */
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border: 5px solid #2563eb;
+    border-radius: 50%;
+
+    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================
+   5. Profile Name
+========================= */
+
 .profile-card > h2 {
+    margin: 10px 0;
+
     font-size: 30px;
+    line-height: 1.4;
+
     color: #111827;
 }
 
-/* Profile Photo */
-.profile-photo {
-    width: 120px;
-    height: 120px;
-    margin:0 auto;
 
-    object-fit: cover;
-    object-position: center top;
+/* =========================
+   6. Paragraphs
+========================= */
 
-    border-radius: 50%;
-
-    border: 6px solid #2563eb;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Paragraph */
 p {
-    font-size: 18px;
-    line-height: 1.7;
-    max-width:800px;
-}
-pre{ white-space: pre-wrap;
-    
+    max-width: 720px;
+
+    margin: 12px auto;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #475569;
+
+    overflow-wrap: anywhere;
 }
 
-/* Sections */
+
+/* =========================
+   7. Old PRE Elements
+========================= */
+
+pre {
+    max-width: 100%;
+
+    margin: 12px 0;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #475569;
+
+    text-align: left;
+}
+
+
+/* =========================
+   8. Sections
+========================= */
+
 section {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 28px;
+    padding: 24px;
 
     background: #f8fafc;
 
-    border-radius: 18px;
-
+    border: 1px solid #e2e8f0;
     border-left: 5px solid #2563eb;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.04);
+
+    text-align: left;
 }
 
-/* Section Headings */
+
+/* =========================
+   9. Section Headings
+========================= */
+
 section h2 {
-    font-size: 27px;
+    margin: 0 0 15px;
+
+    font-size: 25px;
+    line-height: 1.4;
+
     color: #2563eb;
 }
 
-/* Skills */
+
+/* =========================
+   10. Section Text
+========================= */
+
+section p {
+    max-width: 100%;
+    margin: 12px 0;
+
+    text-align: left;
+}
+
+
+/* =========================
+   11. Skills
+========================= */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
 .skills span {
     display: inline-block;
 
+    padding: 9px 20px;
+
     background: #2563eb;
-    color: white;
+    color: #ffffff;
 
-    padding: 10px 18px;
-
-    margin: 6px;
-
+    border: 1px solid #2563eb;
     border-radius: 25px;
 
+    font-size: 15px;
     font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
 }
 
-/* Buttons */
+.skills span:hover {
+    background: #1e40af;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   12. Buttons
+========================= */
+
 .button {
     display: inline-block;
 
-    text-decoration: none;
+    margin: 7px 7px 7px 0;
+    padding: 11px 22px;
 
     background: #2563eb;
-    color: white;
+    color: #ffffff;
 
-    padding: 12px 24px;
-
-    margin: 7px;
-
+    border: 2px solid #2563eb;
     border-radius: 25px;
 
+    font-size: 15px;
     font-weight: bold;
 
-    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* Button Effect */
+
+/* Button Hover */
+
 .button:hover {
     background: #1e40af;
+    border-color: #1e40af;
 
     transform: translateY(-3px);
 
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 7px 16px rgba(37, 99, 235, 0.20);
 }
 
-/* Footer */
+
+/* Keyboard Focus */
+
+.button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 4px;
+}
+
+
+/* =========================
+   13. Footer
+========================= */
+
 footer {
+    width: 100%;
     max-width: 850px;
 
-    margin: 30px auto 0;
+    margin: 28px auto 0;
+    padding: 18px;
 
-    padding: 20px;
+    background: #1e293b;
+    color: #ffffff;
 
     text-align: center;
 
-    background: #1e293b;
-
-    color: white;
-
-    border-radius: 18px;
+    border-radius: 16px;
 }
 
-/* Mobile */
+footer p {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 15px;
+}
+
+
+/* =========================
+   14. Tablet and Mobile
+========================= */
+
 @media (max-width: 600px) {
 
-    h1 {
-        font-size: 38px;
+    body {
+        padding: 16px 10px;
     }
 
     .profile-card {
-        padding: 25px 15px;
+        padding: 24px 15px;
+        border-radius: 18px;
+    }
+
+    .profile-card > h1 {
+        font-size: 34px;
+    }
+
+    .profile-photo {
+        width: 130px;
+        height: 130px;
+
+        object-position: center 25%;
+    }
+
+    .profile-card > h2 {
+        font-size: 25px;
+    }
+
+    section {
+        margin-top: 20px;
+        padding: 18px 14px;
     }
 
     section h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     p {
         font-size: 16px;
+        line-height: 1.7;
+    }
+
+    pre {
+        font-size: 15px;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 10px 17px;
+        font-size: 14px;
+    }
+
+    footer {
+        margin-top: 20px;
+        padding: 15px;
+    }
+}
+
+
+/* =========================
+   15. Small Mobile Screens
+========================= */
+
+@media (max-width: 360px) {
+
+    .profile-card {
+        padding: 20px 12px;
+    }
+
+    .profile-card > h1 {
+        font-size: 29px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    section {
+        padding: 15px 11px;
+    }
+
+    .button {
+        padding: 9px 13px;
+    }
+}
+
+
+/* =========================
+   16. Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
     }
 }
