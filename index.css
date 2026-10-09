@@ -51,7 +51,8 @@ h1 {
     width: 160px;
     height: 160px;
 
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center top;
 
     border-radius: 50%;
 
