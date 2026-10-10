@@ -11,9 +11,9 @@ https://ankittiwari17042007-hars.github.io/My-profile-/
 
 🛠️ Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML
+- CSS
+
 
 ✨ Features
 
